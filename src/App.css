@@ -1,0 +1,31 @@
+/* Ensure the entire page fills the viewport height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the height of the page fills the viewport */
+}
+
+#root {
+  height: 100%; /* Same as the body and html */
+}
+
+.app {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  min-height: 100vh; /* Ensure the container always takes at least the full viewport height */
+}
+
+.container {
+  flex: 1; /* Push the footer to the bottom if content height is less */
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
